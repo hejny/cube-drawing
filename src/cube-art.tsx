@@ -6,12 +6,12 @@ import { DASHPATTERNS } from './DashpatternAttribute';
 export const SVG_PADDING = 10;
 export const IS_NEAR_DISTANCE = 20;
 
-export class FreehandWithDashpatternArt extends Abstract2dArt {
+export class CubeArt extends Abstract2dArt {
     // TODO: Some clear rules how to name serializeName and module names (+ adding scopes and versions there)
     // TODO: How to handle versioning in arts?
-    public static serializeName = 'FreehandWithDashpattern';
+    public static serializeName = 'Cube';
     public static manifest = {
-        name: '@collboard-templates/freehand-with-dashpattern-art',
+        name: '@hejny/cube-drawing/cube-art',
         contributors,
         description,
         license,

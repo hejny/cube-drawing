@@ -2,20 +2,21 @@
 import { declareModule, makeIconModuleOnModule, React, Separator, ToolbarName } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
 import { contributors, description, license, repository, version } from '../package.json';
-import { FreehandWithDashpatternArt } from './FreehandWithDashpatternArt';
+import { FreehandWithDashpatternArt } from './cube-art';
 
 declareModule(
     makeIconModuleOnModule({
         manifest: {
-            name: '@collboard-templates/freehand-with-dashpattern-tool',
+            name: '@hejny/cube-drawing/cube-tool',
             version,
             description,
             contributors,
             license,
             repository,
-            title: { en: 'Drawing of dotted and dashed lines', cs: 'Kreslení přerušovaných čar' },
+            title: { en: 'Drawing of cube buildings', cs: 'Kreslení krychlových staveb' },
+            keywords: ['Minecraft','Lego'],
             categories: ['Basic', 'Art', 'Experimental'],
-            icon: '✒️',
+            icon: '📦',
             flags: {
                 isTemplate: true,
             },

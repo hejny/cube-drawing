@@ -1,3 +1,3 @@
 import './DashpatternAttribute.tsx';
-import './FreehandWithDashpatternArt';
-import './FreehandWithDashpatternTool';
+import './cube-art';
+import './cube-tool-module';
