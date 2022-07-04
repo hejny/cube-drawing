@@ -1,8 +1,8 @@
 // Note: We are using library destroyable and xyzt which is published under @hejny (creator of Collboard) but probbly it should be also published under @collboard to make clear that it is an integral part of Collboard stack.
-import { declareModule, makeIconModuleOnModule, React, Separator, ToolbarName } from '@collboard/modules-sdk';
+import { declareModule, makeIconModuleOnModule, React, SCALE_PIXELS, ToolbarName } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
 import { contributors, description, license, repository, version } from '../package.json';
-import { FreehandWithDashpatternArt } from './cube-art';
+import { CubeArt } from './cube-art';
 
 declareModule(
     makeIconModuleOnModule({
@@ -14,7 +14,7 @@ declareModule(
             license,
             repository,
             title: { en: 'Drawing of cube buildings', cs: 'Kreslení krychlových staveb' },
-            keywords: ['Minecraft','Lego'],
+            keywords: ['Minecraft', 'Lego'],
             categories: ['Basic', 'Art', 'Experimental'],
             icon: '📦',
             flags: {
@@ -26,17 +26,9 @@ declareModule(
             const { attributesSystem } = await systems.request('attributesSystem');
             return {
                 section: 2,
-                icon: '✒️',
+                icon: '📦',
                 boardCursor: 'crosshair',
-                menu: () => (
-                    <>
-                        {attributesSystem.inputRender('weight')}
-                        <Separator />
-                        {attributesSystem.inputRender('color')}
-                        <Separator />
-                        {attributesSystem.inputRender('dashpattern')}
-                    </>
-                ),
+                menu: () => <>{attributesSystem.inputRender('color')}</>,
             };
         },
         moduleActivatedByIcon: {
@@ -52,29 +44,47 @@ declareModule(
 
                 return Registration.fromSubscription((registerAdditionalSubscription) =>
                     touchController.touches.subscribe({
-                        next: (touch) => {
+                        async next(touch) {
                             appState.cancelSelection();
 
-                            // TODO: On dashpattern = solid make classical freehand art (and figure out how to import it here).
-                            const artInProcess = new FreehandWithDashpatternArt(
-                                [],
-                                attributesSystem.getAttributeValue('color') as string,
-                                attributesSystem.getAttributeValue('dashpattern') as string,
-                                attributesSystem.getAttributeValue('weight') as number,
+                            const cubeArt = new CubeArt(attributesSystem.getAttributeValue('color') as string);
+                            let position = (await collSpace.pickPoint(touch.firstFrame.position)).point;
+
+                            // TODO: In sync with grid
+                            // TODO: !!! Use SCALE_PIXELS in tool OR art BUT NOT BOTH
+                            // TODO: !!! Map in place
+                            position = position.map(
+                                (value) => Math.round(value / SCALE_PIXELS.field) * SCALE_PIXELS.field,
                             );
+                            cubeArt.setShift(position);
 
                             const operation = materialArtVersioningSystem.createPrimaryOperation();
-                            operation.newArts(artInProcess);
+                            operation.newArts(cubeArt);
+                            operation.persist();
+
+                            console.log({ cubeArt });
 
                             registerAdditionalSubscription(
                                 touch.frames.subscribe({
                                     async next(touchFrame) {
-                                        artInProcess.path.push((await collSpace.pickPoint(touchFrame.position)).point);
-                                        operation.update(artInProcess);
-                                    },
-                                    complete() {
+                                        /*
+                                        TODO: !!! Only unique on grid
+                                        TODO: !!! Removing
+
+                                        const cubeArt = new CubeArt(
+                                            (await collSpace.pickPoint(touchFrame.position)).point,
+                                            attributesSystem.getAttributeValue('color') as string,
+                                        );
+
+                                        const operation = materialArtVersioningSystem.createPrimaryOperation();
+                                        operation.newArts(cubeArt);
                                         operation.persist();
+
+                                        console.log({ cubeArt });
+
+                                        */
                                     },
+                                    complete() {},
                                 }),
                             );
                         },
