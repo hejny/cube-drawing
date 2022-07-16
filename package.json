@@ -1,7 +1,7 @@
 {
     "name": "cube-drawing",
     "version": "0.1.0",
-    "description": "Simple sample module for Collboard.com with the art (object on the board), tool, and attribute",
+    "description": "Drawing cubes like Minecraft in Collboard.",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
         "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
