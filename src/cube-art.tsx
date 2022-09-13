@@ -22,10 +22,10 @@ export class CubeArt extends Abstract2dArt {
         super();
     }
 
-    public get topLeftCorner() {
+    public get topLeft() {
         return Vector.fromObject(this.shift).subtract(this.size.half());
     }
-    public get bottomRightCorner() {
+    public get bottomRight() {
         return Vector.fromObject(this.shift).add(this.size.half());
     }
 
@@ -43,8 +43,8 @@ export class CubeArt extends Abstract2dArt {
                 className={classNames('art', selected && 'selected')}
                 style={{
                     position: 'absolute',
-                    left: this.topLeftCorner.x - SVG_PADDING,
-                    top: this.topLeftCorner.y - SVG_PADDING,
+                    left: this.topLeft.x - SVG_PADDING,
+                    top: this.topLeft.y - SVG_PADDING,
                 }}
             >
                 <svg
