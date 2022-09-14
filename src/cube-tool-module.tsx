@@ -62,7 +62,7 @@ declareModule(
                             operation.newArts(cubeArt);
                             operation.persist();
 
-                            console.log({ cubeArt });
+                            // console.log({ cubeArt });
 
                             registerAdditionalSubscription(
                                 touch.frames.subscribe({
@@ -84,7 +84,7 @@ declareModule(
 
                                         */
                                     },
-                                    complete() {},
+                                    // complete() {},
                                 }),
                             );
                         },
