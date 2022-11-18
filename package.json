@@ -1,6 +1,6 @@
 {
     "name": "cube-drawing",
-    "version": "0.1.21",
+    "version": "0.1.22",
     "description": "Drawing cubes like Minecraft in Collboard.",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
