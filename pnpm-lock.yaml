@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@collboard/modules-sdk':
-        specifier: 35.13.1800
-        version: 35.13.1800(glob@7.2.3)
+        specifier: 35.13.2000
+        version: 35.13.2000(glob@7.2.3)
       tslint:
         specifier: 6.1.3
         version: 6.1.3(typescript@4.4.4)
@@ -32,8 +32,8 @@ packages:
     resolution: {integrity: sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==}
     engines: {node: '>=6.9.0'}
 
-  '@collboard/modules-sdk@35.13.1800':
-    resolution: {integrity: sha512-eJSqRhO0aBBTGbtHDOXfd37e2Ac0w/xopZaV05moTTLWMIxz8DxEczV8pGvE6kkc8oNARo7TWteGN2yCvSR05Q==}
+  '@collboard/modules-sdk@35.13.2000':
+    resolution: {integrity: sha512-/foF15Psi1PRJFwKxd2lwfxJQ+V0GWXO6GzGQnyL1GAJMG1nwkSQM15Dc28YHFAfF90XUGKF854lNRP7Ey5Xhg==}
     hasBin: true
 
   '@jridgewell/gen-mapping@0.3.5':
@@ -1448,7 +1448,7 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.1
 
-  '@collboard/modules-sdk@35.13.1800(glob@7.2.3)':
+  '@collboard/modules-sdk@35.13.2000(glob@7.2.3)':
     dependencies:
       '@types/react': 17.0.2
       chalk: 4.1.2
@@ -1655,7 +1655,7 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
 
@@ -2015,7 +2015,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -2117,7 +2117,7 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
 
