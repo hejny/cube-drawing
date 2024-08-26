@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@collboard/modules-sdk':
-        specifier: 35.13.2000
-        version: 35.13.2000(glob@7.2.3)
+        specifier: 35.13.2100
+        version: 35.13.2100(glob@7.2.3)
       tslint:
         specifier: 6.1.3
         version: 6.1.3(typescript@4.4.4)
@@ -32,8 +32,8 @@ packages:
     resolution: {integrity: sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==}
     engines: {node: '>=6.9.0'}
 
-  '@collboard/modules-sdk@35.13.2000':
-    resolution: {integrity: sha512-/foF15Psi1PRJFwKxd2lwfxJQ+V0GWXO6GzGQnyL1GAJMG1nwkSQM15Dc28YHFAfF90XUGKF854lNRP7Ey5Xhg==}
+  '@collboard/modules-sdk@35.13.2100':
+    resolution: {integrity: sha512-Kja3CNEH5i5eqNdV0nLf1ZGglTGs0QUoEGrDZC6pGuSqZJqIlMtpIxeZRqWuAMh8UTdhD8b6aEYHHLu02Qilkg==}
     hasBin: true
 
   '@jridgewell/gen-mapping@0.3.5':
@@ -1448,7 +1448,7 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.1
 
-  '@collboard/modules-sdk@35.13.2000(glob@7.2.3)':
+  '@collboard/modules-sdk@35.13.2100(glob@7.2.3)':
     dependencies:
       '@types/react': 17.0.2
       chalk: 4.1.2
