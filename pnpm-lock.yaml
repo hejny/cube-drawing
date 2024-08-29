@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@collboard/modules-sdk':
-        specifier: 35.13.2100
-        version: 35.13.2100(glob@7.2.3)
+        specifier: 35.13.2300
+        version: 35.13.2300(glob@7.2.3)
       tslint:
         specifier: 6.1.3
         version: 6.1.3(typescript@4.4.4)
@@ -32,8 +32,8 @@ packages:
     resolution: {integrity: sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==}
     engines: {node: '>=6.9.0'}
 
-  '@collboard/modules-sdk@35.13.2100':
-    resolution: {integrity: sha512-Kja3CNEH5i5eqNdV0nLf1ZGglTGs0QUoEGrDZC6pGuSqZJqIlMtpIxeZRqWuAMh8UTdhD8b6aEYHHLu02Qilkg==}
+  '@collboard/modules-sdk@35.13.2300':
+    resolution: {integrity: sha512-e8Ei6Yy8AQtI1IVEfa+S7XtSMsjqx+bfjfc1hEURovFhknfm7CQGixGhZrmtfCNkYDV9THr/u9zZg1vW30O5jg==}
     hasBin: true
 
   '@jridgewell/gen-mapping@0.3.5':
@@ -1407,9 +1407,6 @@ packages:
       utf-8-validate:
         optional: true
 
-  xyzt@5.4.0:
-    resolution: {integrity: sha512-4Ue3aCgERYircSKW0Z/s4iAPGbIXJJO4MU4mDXGhda+bMtDhWTPRk6vjQMMk0grXRLCaDX40dvQ/AYtWfwqIug==}
-
   xyzt@5.4.3:
     resolution: {integrity: sha512-D0UgDWFw2/Hy2PhxDiqEp3f/eK9SyviPOA+KzI9JwJm1ioG6xnt1V/Va1kIFZYMMBDddW0Sd1DEI83Y7c0ETMg==}
 
@@ -1448,7 +1445,7 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.1
 
-  '@collboard/modules-sdk@35.13.2100(glob@7.2.3)':
+  '@collboard/modules-sdk@35.13.2300(glob@7.2.3)':
     dependencies:
       '@types/react': 17.0.2
       chalk: 4.1.2
@@ -1483,7 +1480,7 @@ snapshots:
       vm2: 3.9.7
       waitasecond: 1.11.1(typescript@4.4.4)
       webpack: 5.35.1
-      xyzt: 5.4.0
+      xyzt: 5.4.3
     transitivePeerDependencies:
       - '@swc/core'
       - bufferutil
@@ -2893,8 +2890,6 @@ snapshots:
   ws@7.5.9: {}
 
   ws@8.7.0: {}
-
-  xyzt@5.4.0: {}
 
   xyzt@5.4.3: {}
 
