@@ -2,7 +2,7 @@
     "name": "cube-drawing",
     "version": "0.1.125",
     "description": "Drawing cubes like Minecraft in Collboard.",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "Apache-2.0",
     "contributors": [
         "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
     ],
