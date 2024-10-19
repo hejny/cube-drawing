@@ -1,6 +1,6 @@
 {
     "name": "cube-drawing",
-    "version": "0.1.128",
+    "version": "0.1.129",
     "description": "Drawing cubes like Minecraft in Collboard.",
     "license": "Apache-2.0",
     "contributors": [
